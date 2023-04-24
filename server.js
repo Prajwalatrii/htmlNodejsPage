@@ -14,8 +14,6 @@ app.get('/profile-picture', function (req, res) {
      res.end(img, 'binary');
 });
 
-
-
 app.get('/get-profile', function (req, res) {
     var response = res;
     MongoClient.connect('mongodb://amin:password@localhost:2017', function (err, client) {
