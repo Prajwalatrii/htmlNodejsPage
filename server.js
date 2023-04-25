@@ -4,6 +4,8 @@ var fs = require('fs');
 var app = express();
 var _dirname= process.cwd()
 
+console.log(_dirname)
+
 app.get('/', function (req, res) {
      res. sendFile(path. join(_dirname, "index.html"));
 });
