@@ -4,8 +4,10 @@ EXPOSE 80
 EXPOSE 443
 
 WORKDIR /src
+
+COPY package*.json ./
 RUN npm i
 
-COPY ./ .
+COPY . .
 
 CMD ["node","server"]
