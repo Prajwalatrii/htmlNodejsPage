@@ -4,7 +4,7 @@ pipeline {
       registryCredential = 'dockerhub'
       dockerImage = ''
   }
-   agent { label 'dockerserver' } 
+   agent { label 'Mydocker' } 
 //   agent { 
 //     docker { 
 //       image 'node:18.16.00'
