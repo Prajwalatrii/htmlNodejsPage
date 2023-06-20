@@ -11,6 +11,10 @@ pipeline {
 //       args '-p 5000:5000'
 //    } 
 //  }
+stage('Initialize'){
+        def dockerHome = tool 'MyDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+ }
   stages {
   	stage('Node Install') {
     	agent {
