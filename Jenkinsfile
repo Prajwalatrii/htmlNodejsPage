@@ -4,13 +4,12 @@ pipeline {
       registryCredential = 'dockerhub'
       dockerImage = ''
   }
-   agent { label 'Mydocker' } 
-//   agent { 
-//     docker { 
-//       image 'node:18.16.00'
-//       args '-p 5000:5000'
-//    } 
-//  }
+    agent { 
+     docker { 
+       image 'node:18.16.00'
+       // args '-p 5000:5000'
+    } 
+  }
   stages { 
   	stage('Node Install') {
     	agent {
